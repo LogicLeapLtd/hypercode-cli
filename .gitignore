@@ -2,3 +2,5 @@ node_modules
 .claude
 .hypercode
 dist
+.hypercode-local.json
+.env.local

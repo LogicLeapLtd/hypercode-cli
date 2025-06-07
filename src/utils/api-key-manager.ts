@@ -23,7 +23,18 @@ export class ApiKeyManager {
   }
 
   async getApiKey(keyName: string): Promise<string | undefined> {
-    // TODO: Set your API key in environment variable or config
+    // Check for local API key configuration first
+    if (keyName === 'OPENAI_API_KEY') {
+      // Try reading from a local non-tracked config file
+      try {
+        const localConfig = require(path.join(process.cwd(), '.hypercode-local.json'));
+        if (localConfig.OPENAI_API_KEY) {
+          return localConfig.OPENAI_API_KEY;
+        }
+      } catch {
+        // File doesn't exist, continue to other methods
+      }
+    }
 
     // First check environment variable
     const envKey = process.env[keyName];
