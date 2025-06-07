@@ -4,3 +4,4 @@ node_modules
 dist
 .hypercode-local.json
 .env.local
+.env
