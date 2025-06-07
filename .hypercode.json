@@ -1,0 +1,34 @@
+{
+  "project": {
+    "type": "node",
+    "name": "hypercode-cli",
+    "workingDir": "./",
+    "exclude": [
+      "node_modules",
+      "dist",
+      ".git",
+      "build",
+      ".DS_Store",
+      "Thumbs.db",
+      ".next",
+      ".nuxt",
+      "coverage"
+    ]
+  },
+  "models": {
+    "speed": "gpt-4.1-nano",
+    "quality": "claude-sonnet-4",
+    "reasoning": "deepseek-r1-0528",
+    "validation": "deepseek-v3-0324"
+  },
+  "codeStyle": {
+    "indent": "2 spaces",
+    "semicolons": true,
+    "quotes": "single"
+  },
+  "macOS": {
+    "editor": "code",
+    "diffTool": "opendiff",
+    "terminal": "iterm2"
+  }
+}
